@@ -2,10 +2,10 @@
 name: Molecule
 "on":
   workflow_call:
-    inputs:
-      molecule_image:
-        required: true
-        type: string
+    # inputs:
+    #   molecule_image:
+    #     required: true
+    #     type: string
     # secrets:
     #   token:
     #     required: true
