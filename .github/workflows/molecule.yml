@@ -12,6 +12,13 @@ name: Molecule
 jobs:
   molecule:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        molecule_image:
+          - ghcr.io/agoloncser/docker-molecule-fedora:39
+          - ghcr.io/agoloncser/docker-molecule-fedora:40
+          - ghcr.io/agoloncser/docker-molecule-ubuntu:20.04
+          - ghcr.io/agoloncser/docker-molecule-ubuntu:22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
